@@ -1,0 +1,14 @@
+version: '3.7'
+
+services: 
+  iris:
+    image: containers.intersystems.com/intersystems/iris-community:2023.1.0.229.0
+    hostname: iris
+    command: --ISCAgent false --monitorCPF false
+    ports:
+    - 52873:52773
+    - 1972:1972
+    environment:
+    - ISC_CPF_MERGE_FILE=/ISC/merge.cpf
+    volumes:
+    - .:/ISC  
