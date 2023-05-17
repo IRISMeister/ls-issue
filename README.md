@@ -3,6 +3,8 @@ Ls crashes immedialtly when class contains non ascii character.
 
 It happens on Windows10 + WSL2 + VSCode WSL extention ( https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl ).
 
+If I do the same on Windows10, without WSL2, it works fine.
+
 # Symptom
 [A class without Japanese letter](src/User/ASCII.cls) works as expected. For example, it shows you related document tip when you hover over %Status.
 If you open a [class](src/User/JP.cls) which contains Japanese letter, LS crashes.  The same seems to apply to, say, [Germany](src/User/DE.cls).
@@ -16,7 +18,7 @@ Full output from InterSystems Language Server is [here](./full-dump.txt).
 # How to reproduce
 ```
 Open wsl2 terminal and then,
-$ git clone this repo.
+$ git clone https://github.com/IRISMeister/ls-issue.git
 $ cd ls-issue
 $ docker compose up -d
 $ code .
