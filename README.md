@@ -40,3 +40,16 @@ $ docker compose exec iris iris session iris "##class(DE).Run()"
 $
 ```
 Username and pasword is SuperUser / SYS .
+
+
+# findings
+
+It start working when I change locale by
+```
+sudo localectl set-locale LANG=en_US.UTF-8
+```
+After that, re-doing it, by next command, dosen't affect the result...
+```
+sudo localectl set-locale LANG=ja_JP.UTF-8
+```
+
