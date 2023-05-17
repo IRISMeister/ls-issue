@@ -3,7 +3,9 @@ Ls crashes immedialtly when class contains non ascii character.
 
 It happens on Windows10 + WSL2 + VSCode WSL extention ( https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl ).
 
-If I do the same on Windows10, without WSL2, it works fine.
+I'm not using Docker Desktop.
+
+If I do the same on Windows10, git clone to both Windows and WSL2, start container on WSL2 and then open VSCode on Windows path, it works fine.
 
 # Symptom
 [A class without Japanese letter](src/User/ASCII.cls) works as expected. For example, it shows you related document tip when you hover over %Status.
